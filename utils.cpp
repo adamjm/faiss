@@ -21,7 +21,9 @@
 
 #include <omp.h>
 
+#ifdef __SSE__
 #include <immintrin.h>
+#endif
 
 #include <algorithm>
 #include <vector>
