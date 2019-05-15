@@ -15,6 +15,10 @@ case $target in
 dnl This is an arch for Nvidia Xavier a proper detection would be nice.
     ARCH_CPUFLAGS="-march=armv8.2-a"
     ;;
+  ppc64le*-*)
+dnl This is an arch for Nvidia Xavier a proper detection would be nice.
+    ARCH_CPUFLAGS="-mcpu=native"
+    ;;
   *) ;;
 esac
 AC_MSG_RESULT([$target CPUFLAGS+=$ARCH_CPUFLAGS CXXFLAGS+=$ARCH_CXXFLAGS])
